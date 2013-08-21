@@ -3,4 +3,4 @@ from models import Antimat, Normalizer
 from django.conf import settings
 
 
-Normalizer.init(path=settings.MORPHY_RU_DICT_PATH)
+Normalizer.init(path=settings.MORPHY_DICT_PATH)
