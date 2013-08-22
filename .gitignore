@@ -1,0 +1,18 @@
+# Python
+*.pyc
+*.pyo
+
+# Common IDEs
+*.swp
+.idea/
+.buildpath
+.project
+.settings
+atlassian-ide-plugin.xml
+.idea/*
+
+# Project
+local.py
+static/*
+media/*
+
