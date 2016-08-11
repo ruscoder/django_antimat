@@ -3,6 +3,7 @@
 *.pyo
 .eggs/
 *.egg-info/
+*.egg
 .cache
 .tox
 

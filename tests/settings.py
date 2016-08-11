@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
 
     'django_antimat',
-    'tests.apps.TestConfig',
+    'tests',
 ]
 
 MIDDLEWARE_CLASSES = (

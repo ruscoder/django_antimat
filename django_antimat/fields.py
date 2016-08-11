@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-
-
+import six
 
 class AntimatDescriptor(object):
     def __init__(self, field):
@@ -17,7 +16,7 @@ class AntimatDescriptor(object):
         from .core import Antimat
         orig_text = instance.__dict__.get(self.orig_attr_name)
 
-        if isinstance(value, basestring):
+        if isinstance(value, six.string_types):
             if orig_text != value:
                 instance.__dict__[self.orig_attr_name] = value
                 value = Antimat.replace_badwords(value)

@@ -12,11 +12,9 @@ setup(name='django_antimat',
     include_package_data=True,
     install_requires=[
         'Django>=1.4',
+        'six',
         'pymorphy2>=0.7',
         'pymorphy2-dicts-ru',
     ],
     keywords='django antimat anti snub',
-
-    setup_requires=['pytest-runner', 'pytest-django', "setuptools>=25.1.6"],
-    tests_require=['pytest'],
 )
