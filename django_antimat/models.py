@@ -1,15 +1,14 @@
 # -*- coding: utf8 -*-
 from django.db import models
 from django.db.models.signals import pre_save
+
 from pymorphy.contrib import tokenizers
 from pymorphy import get_morph
 
-
 class Mat(models.Model):
-
     word = models.CharField(verbose_name=u'Word', max_length=50)
     word_normalized = models.CharField(verbose_name=u'Normalized word', max_length=50,
-                                       blank=False, null=False, unique=True)
+        blank=False, null=False, unique=True)
 
     def __unicode__(self):
         return self.word
@@ -20,14 +19,12 @@ class Mat(models.Model):
         if not Mat.objects.filter(word_normalized=self.word_normalized).exists():
             super(Mat, self).save(**kwargs)
 
-
     class Meta:
         verbose_name = u'Mat'
         verbose_name_plural = u'Mats'
 
 
 class Normalizer(object):
-
     morph = None
 
     @classmethod
@@ -44,7 +41,6 @@ class Normalizer(object):
 
 
 class Antimat(object):
-
     @classmethod
     def del_repeated_chars_from_word(cls, word):
         new_word = ''
@@ -77,7 +73,7 @@ class Antimat(object):
 
             modified_field_value = cls.mat_filter(field_value)
             if field_value != modified_field_value:
-                setattr(instance, field,  modified_field_value)
+                setattr(instance, field, modified_field_value)
                 instance.save()
 
         pre_save.connect(receiver=antimat_field, sender=model, weak=False)
