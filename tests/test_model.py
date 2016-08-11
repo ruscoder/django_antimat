@@ -23,3 +23,10 @@ class ModelTestCase(TestCase):
         self.assertEqual(m.text, self.replaced_text)
         m.text = self.test_text
         self.assertEqual(m.text, self.replaced_text)
+
+    def test_null(self):
+        for v in [None, False, True]:
+            m = TestAntimat(text=v)
+            self.assertEqual(m.text, v)
+            m = TestAntimat.objects.create(text=v)
+            self.assertEqual(m.text, v)
