@@ -1,5 +1,6 @@
 # django-antimat
 
+[![Build Status](https://travis-ci.org/Apkawa/django_antimat.svg?branch=master)](https://travis-ci.org/Apkawa/django_antimat)
 
 # Requirements:
 
