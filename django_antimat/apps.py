@@ -15,8 +15,4 @@ class AntimatConfig(AppConfig):
     label = 'django_antimat'
 
     def ready(self):
-        morphy_dict_path = getattr(settings, 'MORPHY_DICT_PATH', None)
-        if not morphy_dict_path:
-            raise AppRegistryNotReady('Do not set settings MORPHY_DICT_PATH')
-        from .models import Normalizer
-        Normalizer.init(path=morphy_dict_path)
+        pass

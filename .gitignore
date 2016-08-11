@@ -3,6 +3,8 @@
 *.pyo
 .eggs/
 *.egg-info/
+.cache
+.tox
 
 # Common IDEs
 *.swp

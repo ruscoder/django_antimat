@@ -43,4 +43,3 @@ SECRET_KEY = 'easy'
 ###############################################################
 
 
-MORPHY_DICT_PATH = os.path.join(FIXTURES_ROOT, 'ru.sqlite-json')
