@@ -1,4 +1,6 @@
 # -*- coding: utf8 -*-
+from __future__ import unicode_literals
+
 from django import forms
 from .models import Mat
 from django.forms.widgets import Textarea

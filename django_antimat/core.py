@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from django.db.models import FileField
-from django.db.models.signals import pre_save
+from __future__ import unicode_literals
+
 from django.utils.encoding import smart_text
 
 from pymorphy2 import MorphAnalyzer, tokenizers

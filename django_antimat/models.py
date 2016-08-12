@@ -1,18 +1,20 @@
 # -*- coding: utf8 -*-
+from __future__ import unicode_literals
+
 from django.db import models
 
 from django_antimat.core import Normalizer
 
 
 class Mat(models.Model):
-    word = models.CharField(verbose_name=u'Word', max_length=50)
-    word_normalized = models.CharField(verbose_name=u'Normalized word', max_length=50,
+    word = models.CharField(verbose_name='Word', max_length=50)
+    word_normalized = models.CharField(verbose_name='Normalized word', max_length=50,
                                        blank=False, null=False, unique=True,
                                        db_index=True)
 
     class Meta:
-        verbose_name = u'Mat'
-        verbose_name_plural = u'Mats'
+        verbose_name = 'Mat'
+        verbose_name_plural = 'Mats'
 
     def __unicode__(self):
         return self.word
