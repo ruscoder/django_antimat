@@ -1,6 +1,7 @@
 # -*- coding: utf8 -*-
-from models import Antimat, Normalizer
-from django.conf import settings
+from __future__ import unicode_literals
 
+from .core import Antimat
 
-Normalizer.init(path=settings.MORPHY_DICT_PATH)
+default_app_config = 'django_antimat.apps.AntimatConfig'
+

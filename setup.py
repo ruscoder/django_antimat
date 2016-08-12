@@ -2,18 +2,19 @@
 from setuptools import setup, find_packages
 
 setup(name='django_antimat',
-    version='1.0',
+    version='1.1',
     description='Django antimat is application for filtering snub words.',
     license='BSD',
     url='https://github.com/ruscoder/django_antimat',
     author='Vadim',
     author_email='Vadim <rusmiligamer@gmail.com>',
-    packages=find_packages(),
+    packages=find_packages(exclude=['tests']),
     include_package_data=True,
     install_requires=[
-            'Django>=1.4.3',
-            'south',
-            'pymorphy>=0.5.6',
-            ],
+        'Django>=1.4',
+        'six',
+        'pymorphy2>=0.7',
+        'pymorphy2-dicts-ru',
+    ],
     keywords='django antimat anti snub',
 )

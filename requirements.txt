@@ -1,0 +1,9 @@
+Django>=1.4
+pymorphy2
+pymorphy2-dicts-ru
+six
+
+#dev
+pytest
+pytest-django
+pytest-pythonpath

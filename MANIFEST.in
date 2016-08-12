@@ -1,2 +1,3 @@
 recursive-include django_antimat *
+recursive-exclude tests *
 global-exclude *.pyc
