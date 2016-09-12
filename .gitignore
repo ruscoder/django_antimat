@@ -1,6 +1,11 @@
 # Python
 *.pyc
 *.pyo
+.eggs/
+*.egg-info/
+*.egg
+.cache
+.tox
 
 # Common IDEs
 *.swp

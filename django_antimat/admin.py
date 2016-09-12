@@ -1,7 +1,10 @@
 # -*- coding: utf8 -*-
-from models import Mat
-from forms import MatForm
+from __future__ import unicode_literals
+
 from django.contrib import admin
+
+from .models import Mat
+from .forms import MatForm
 
 
 class MatAdmin(admin.ModelAdmin):
